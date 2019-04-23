@@ -23,6 +23,10 @@ class PasswordCreateView(LoginRequiredMixin, CreateView):
         'description',
         ]
 
+    def get_success_url(self, *args, **kwargs):
+        password_id = self.kwargs['password_id']
+        print(password_id)
+        return reverse('password-detail', kwargs={'pk': password_id})
 
 class PasswordListView(ListView):
     model = Password
@@ -34,13 +38,18 @@ class PasswordDetailView(DetailView):
     model = Password
 
 
-class PasswordUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class PasswordUpdateView(LoginRequiredMixin, UpdateView):
     model = Password
     fields = [
-
+        'saved_password',
+        'website',
+        'description',
         ]
 
+    def form_valid(self, form):
+        return super().form_valid(form)
 
-class PasswordDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+        
+class PasswordDeleteView(LoginRequiredMixin, DeleteView):
     model = Password
-    success_url = '/all_passwords'
+    success_url = '/vault/password_list'
