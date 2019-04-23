@@ -25,7 +25,7 @@ SECRET_KEY = '%uaz&8z_513_e)fkqo8b@o-pnk*vbin3kpko@@w&5g!s6tc2b2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'my_project.apps.MyProjectConfig',
     'vault.apps.VaultConfig',
     'crispy_forms',
+    'users.apps.UsersConfig',
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

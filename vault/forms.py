@@ -14,7 +14,7 @@ class PasswordForm(ModelForm):
     class Meta:
         model = Password
         fields = [
-        saved_password,
-        website,
-        description,
+        'saved_password',
+        'website',
+        'description',
         ]   
