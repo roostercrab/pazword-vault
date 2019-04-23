@@ -7,15 +7,14 @@ from django.db import models
 from django.forms import ModelForm
 from django.urls import reverse
 
-from .models import Vault
+from .models import Password
 
 
-class VaultForm(ModelForm):
+class PasswordForm(ModelForm):
     class Meta:
-        model = Vault
+        model = Password
         fields = [
-        'class_name',
-        'description',
-        'expectations',
-        'curriculum',
+        saved_password,
+        website,
+        description,
         ]   

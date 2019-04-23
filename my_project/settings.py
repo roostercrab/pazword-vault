@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'my_project.apps.MyProjectConfig',
-    'password_vault.apps.PasswordVaultConfig',
+    'password.apps.PasswordConfig',
     'crispy_forms',
 ]
 
