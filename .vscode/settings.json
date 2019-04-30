@@ -1,6 +1,6 @@
 {
     "workbench.colorCustomizations": {
-        "titleBar.activeForeground": "#F5FDF8"
+        "tab.unfocusedActiveBorder": "#fff0"
     },
     "python.pythonPath": "/Users/jesseshea/.pyenv/versions/3.6.8/bin/python"
 }

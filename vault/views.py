@@ -26,7 +26,7 @@ class PasswordCreateView(LoginRequiredMixin, CreateView):
     def get_success_url(self, *args, **kwargs):
         password_id = self.kwargs['password_id']
         print(password_id)
-        return reverse('password-detail', kwargs={'pk': password_id})
+        return reverse('/vault/password-detail', kwargs={'pk': password_id})
 
 class PasswordListView(ListView):
     model = Password

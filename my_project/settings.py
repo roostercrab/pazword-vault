@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'vault.apps.VaultConfig',
     'crispy_forms',
     'users.apps.UsersConfig',
-    'zxcvbn_password',
+    #'zxcvbn_password',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
